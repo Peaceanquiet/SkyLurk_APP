@@ -1,17 +1,36 @@
 import 'package:flutter/material.dart';
 
-class HamburgerMenu extends StatelessWidget {
-  const HamburgerMenu({Key? key}) : super(key:key);
+class HamburgerDrawer extends StatefulWidget {
+  const HamburgerDrawer({
+    super.key,
+    this.width,
+    this.height,
+    required this.data,
+  });
+
+  final double? width;
+  final double? height;
+  final String data;
 
   @override
-  _HamburgerMenuState createState() => _HamburgerMenuState();
+  State<HamburgerDrawer> createState() => _HamburgerDrawerState();
 }
 
-class _HamburgerMenuState extends State<HamburgerMenu>{
-
+class _HamburgerDrawerState extends State<HamburgerDrawer>{
   @override
   Widget build(BuildContext context){
-    return Padding(
-      padding: ,)
+    
+    return Drawer(
+      child: ListView(
+        children: [
+          ListTile(
+            title: const Text("Item 1"),
+            onTap: () {
+              //Nothing rn
+            },
+          ),
+        ],
+      ),
+    );
   }
 }
