@@ -26,7 +26,7 @@ class _HamburgerDrawerState extends State<HamburgerDrawer>{
           ListTile(
             title: const Text("Item 1"),
             onTap: () {
-              //Nothing rn
+              Navigator.pop(context);
             },
           ),
         ],
