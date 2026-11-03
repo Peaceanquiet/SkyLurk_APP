@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:skylurk/widgets/hamburgermenu.dart';
+import 'package:skylurk/widgets/hamburger_menu.dart';
 
 void main() {
 
@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'SkyClient',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
       ),
@@ -46,6 +47,10 @@ class _MyHomePageState extends State<MyHomePage> {
           );
         },
         ),
+        actions: [
+          Icon(Icons.message),
+          Padding(padding: EdgeInsetsGeometry.all(5),)
+        ]
       ),
       drawer: HamburgerDrawer(data: "Single"),
       body: Center(        
