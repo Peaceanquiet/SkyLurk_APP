@@ -5,12 +5,10 @@ class HamburgerDrawer extends StatefulWidget {
     super.key,
     this.width,
     this.height,
-    required this.data,
   });
 
   final double? width;
   final double? height;
-  final String data;
 
   @override
   State<HamburgerDrawer> createState() => _HamburgerDrawerState();

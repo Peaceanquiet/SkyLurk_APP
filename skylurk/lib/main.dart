@@ -16,8 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
       ),
-      
-      home: const MyHomePage(title: 'SkyLurk'),
+      home: const MyHomePage(title: '<-- Find Server'),
     );
   }
 }
@@ -30,7 +29,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,15 +46,24 @@ class _MyHomePageState extends State<MyHomePage> {
         },
         ),
         actions: [
-          Icon(Icons.message),
+          Builder(builder: (context){
+            return IconButton(icon: const Icon(Icons.message),
+            onPressed: () {
+              //Change this to custom drawer for messages.
+              Scaffold.of(context).openEndDrawer(
+                
+              );
+            },
+            );
+          },
+          ),
           Padding(padding: EdgeInsetsGeometry.all(5),)
-        ]
+        ],
       ),
-      drawer: HamburgerDrawer(data: "Single"),
+      drawer: HamburgerDrawer(),
+      endDrawer: Drawer(),
       body: Center(        
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
           ],
         ),
