@@ -64,6 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       endDrawer: Drawer(
         child: Column(children:[
+          Expanded(child: Container()),
           Container(
             color: Colors.grey.shade300,
             child: TextField(

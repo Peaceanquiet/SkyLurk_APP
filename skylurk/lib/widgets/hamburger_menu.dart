@@ -36,7 +36,16 @@ class _HamburgerDrawerState extends State<HamburgerDrawer>{
               
               onTap: () {
                 Navigator.pop(context);
-                
+                showDialog(context: context,
+                builder: (context) {
+                  return AlertDialog(
+                    title: TextField(
+                      decoration: const InputDecoration(hintText: "IP Address here"),
+                    ),
+                    actions: [FloatingActionButton(tooltip: "Connect",child: Icon(Icons.electrical_services_rounded),
+                      onPressed: (){})],
+                  );
+                });
               },
             ),
           ),
