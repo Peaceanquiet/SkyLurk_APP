@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:skylurk/widgets/hamburger_menu.dart';
-
 void main() {
 
   runApp(const MyApp());
@@ -60,35 +59,22 @@ class _MyHomePageState extends State<MyHomePage> {
           Padding(padding: EdgeInsetsGeometry.all(5),)
         ],
       ),
-      drawer: HamburgerDrawer(),
-      endDrawer: Drawer(
+      drawer: HamburgerDrawer(
 
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-          Placeholder(
-            
-        ),
-        Padding(padding:EdgeInsetsGeometry.all(5)),
-         TextField(
-          decoration: InputDecoration(border: OutlineInputBorder(), hintText: "Enter message here."),
-        ),
-        Padding(padding:EdgeInsetsGeometry.all(10)),
-         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-          //Padding(padding:EdgeInsetsGeometry.all(10)),
-          FloatingActionButton(child:Text("Send"),
-            onPressed: (){}),
-          //Padding(padding:EdgeInsetsGeometry.all(10)), 
-          FloatingActionButton(
-            
-            child: Text("Whisper"),
-            onPressed: (){})],
+      ),
+      endDrawer: Drawer(
+        child: Column(children:[
+          Container(
+            color: Colors.grey.shade300,
+            child: TextField(
+              textAlign: TextAlign.center,
+              decoration: InputDecoration(
+                contentPadding: EdgeInsets.all(10),
+                hintText: "Enter message here.",
+              )
             ),
-            Padding(padding:EdgeInsetsGeometry.all(10)),
-            ],),
-        
+          ),
+        ]),
       ),
       body: Center(        
         child: Column(
