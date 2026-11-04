@@ -69,9 +69,9 @@ class _MyHomePageState extends State<MyHomePage> {
           Placeholder(
             
         ),
-        Padding(padding:EdgeInsetsGeometry.all(1)),
+        Padding(padding:EdgeInsetsGeometry.all(5)),
          TextField(
-          
+          decoration: InputDecoration(border: OutlineInputBorder(), hintText: "Enter message here."),
         ),
         Padding(padding:EdgeInsetsGeometry.all(10)),
          Row(
