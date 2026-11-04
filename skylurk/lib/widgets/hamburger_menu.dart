@@ -28,6 +28,22 @@ class _HamburgerDrawerState extends State<HamburgerDrawer>{
             padding: EdgeInsetsGeometry.all(10)
           ),
           Container(
+            color: Colors.green,
+            
+            child:
+              ListTile(
+              title: const Text("Connect to Server."),
+              
+              onTap: () {
+                Navigator.pop(context);
+                
+              },
+            ),
+          ),
+          Padding(
+            padding: EdgeInsetsGeometry.all(10)
+          ),
+          Container(
             color: Colors.amberAccent[100],
             
             child:
