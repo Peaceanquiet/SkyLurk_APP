@@ -61,7 +61,35 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       drawer: HamburgerDrawer(),
-      endDrawer: Drawer(),
+      endDrawer: Drawer(
+
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+          Placeholder(
+            
+        ),
+        Padding(padding:EdgeInsetsGeometry.all(1)),
+         TextField(
+          
+        ),
+        Padding(padding:EdgeInsetsGeometry.all(10)),
+         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+          //Padding(padding:EdgeInsetsGeometry.all(10)),
+          FloatingActionButton(child:Text("Send"),
+            onPressed: (){}),
+          //Padding(padding:EdgeInsetsGeometry.all(10)), 
+          FloatingActionButton(
+            
+            child: Text("Whisper"),
+            onPressed: (){})],
+            ),
+            Padding(padding:EdgeInsetsGeometry.all(10)),
+            ],),
+        
+      ),
       body: Center(        
         child: Column(
           children: [
